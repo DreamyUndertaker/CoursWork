@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - React_ASP.NET_application</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/React_ASP.NET_application.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#190b2b">
+            <div class="container-fluid col-7 mx-auto" style="max-width:800px">
+                <a class="navbar-brand" href="">CourseHunter</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Категории
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color:#190b2b ">
+                                <li><a class="dropdown-item" href="/frontend">Frontend</a></li>
+                                <li><a class="dropdown-item" href="/backend">Backend</a></li>
+                                <li><a class="dropdown-item" href="/system">System programming</a></li>
+                                <li><a class="dropdown-item" href="/marketing">Marketing</a></li>
+                                <li><a class="dropdown-item" href="/video">Video and 3D</a></li>
+                                <li><a class="dropdown-item" href="/graphic">Graphic</a></li>
+                                <li><a class="dropdown-item" href="/devops">DevOps</a></li>
+                                <li><a class="dropdown-item" href="tools">Tools</a></li>
+                                <li><a class="dropdown-item" href="/mobileapp">Разработка мобильных приложений</a></li>
+                                <li><a class="dropdown-item" href="/gamedev">Gamedev</a></li>
+                                <li><a class="dropdown-item" href="/cms">CMS</a></li>
+                                <li><a class="dropdown-item" href="/blockchain">Blockchain</a></li>
+                                <li><a class="dropdown-item" href="/testing">Тестирование</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" >
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Все курсы
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color:#190b2b ">
+                                <li><a class="dropdown-item" href="/popularall">Популярные</a></li>
+                                <li><a class="dropdown-item" href="/free">Бесплатные</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Книги
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color:#190b2b ">
+                                <li><a class="dropdown-item" href="/popularbooks">Популярные</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <a class="btn" role="button" href="/topics" id="navbarDarkDropdownMenuLink" aria-expanded="false" style="color:lightgray">Топики</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <a class="btn" role="button" href="/links" id="navbarDarkDropdownMenuLink" aria-expanded="false" style="color:lightgray">Источники</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <a class="btn" role="button" href="/Account" id="navbarDarkDropDownMenuLink" aria-expanded="false" style="color:lightgray"><img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" class="rounded" style="height: 30px; width: 30px"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer fixed-bottom" style="background-color:#190b2b">
+    <div class="container col-11 mx-auto" style="color: white; max-width: 700px">
+        <div class="row">
+            <div class="col-4" style="padding-right:50px">
+                <h3>CourseHunter</h3>
+                <span class="col">
+                    Ресурс видеоуроков
+                    программирования для front
+                    и back end разработчиков.
+                    Бери знания своего профиля
+                    у нас, ведь мы самые
+                    лучшие блеать. Серьезно.
+                </span>
+            </div>
+                <div class="col-3" style="padding-right:50px">
+                <h5>КАТЕГОРИИ</h5>
+                <ul class="list-unstyled">
+                    <li class="row">
+                        <a class="link-light" href="/allcategories">Все категории</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/html">HTML</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/css">CSS</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/javascript">JavaScript</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/reactjs">React.js</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/python">Python</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/java">Java</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/nodejs">Node.js</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/other">Другое</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/typescript">Typescript</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h5>ИСТОЧНИКИ</h5>
+                <ul class="list-unstyled">
+                    <li class="row">
+                        <a class="link-light" href="/allsource">Все источники</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/adamwathan">adamwathan</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/codewithmosh">codewithmosh</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/frontendmasters">frontendmasters</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/itvdn">itvdn</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/kentcdobbs">Kent C.Dodds</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/otus">OTUS</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/udemy">udemy</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/videosmile">videosmile</a>
+                    </li>
+                    <li class="row">
+                        <a class="link-light" href="/webformyself">webformyself</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
