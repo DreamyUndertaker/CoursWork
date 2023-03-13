@@ -1,4 +1,374 @@
 ﻿@{
     ViewData["Title"] = "Card";
 }
+<style>
+    body{
+        background-color:#190b2b;
 
+    }
+
+	.rating-area {
+		overflow: hidden;
+		width: 265px;		
+		padding: 0;
+	}
+		.rating-area:not(:checked) > input {
+			display: none;
+		}
+		.rating-area:not(:checked) > label {
+			float: right;
+			width: 42px;
+			padding: 0;
+			cursor: pointer;
+			font-size: 32px;
+			line-height: 32px;
+			color: lightgrey;
+			text-shadow: 1px 1px #bbb;
+		}
+			.rating-area:not(:checked) > label:before {
+				content: '★';
+			}
+		.rating-area > input:checked ~ label {
+			color: gold;
+			text-shadow: 1px 1px #c60;
+		}
+		.rating-area:not(:checked) > label:hover,
+		.rating-area:not(:checked) > label:hover ~ label {
+			color: gold;
+		}
+		.rating-area > input:checked + label:hover,
+		.rating-area > input:checked + label:hover ~ label,
+		.rating-area > input:checked ~ label:hover,
+		.rating-area > input:checked ~ label:hover ~ label,
+		.rating-area > label:hover ~ input:checked ~ label {
+			color: gold;
+			text-shadow: 1px 1px goldenrod;
+		}
+	.rate-area > label:active {
+		position: absolute;
+	}
+</style>
+
+<div class="container-md" style="background-color:#472f66">
+    <div class="col">
+        <div class="row h3" style="color:white">
+            Full Stack for Front-End Engineers, v3
+        </div>
+        <div class="row" style="color:white">
+            <span>Full Stack for Front-End Engineers, v3</span>
+        </div>
+        <div class="row">
+            <div class="rating-area">
+	            <input type="radio" id="star-5" name="rating" value="5">
+	            <label for="star-5" title="Оценка «5»"></label>	
+	            <input type="radio" id="star-4" name="rating" value="4">
+	            <label for="star-4" title="Оценка «4»"></label>    
+	            <input type="radio" id="star-3" name="rating" value="3">
+	            <label for="star-3" title="Оценка «3»"></label>  
+	            <input type="radio" id="star-2" name="rating" value="2">
+	            <label for="star-2" title="Оценка «2»"></label>    
+	            <input type="radio" id="star-1" name="rating" value="1">
+	            <label for="star-1" title="Оценка «1»"></label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-md" style="padding-top: 30px; background-color: #190b2b; box-shadow: 0px 0px 5px 1px white; color: white">
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<img src="https://cdn.coursehunter.net/courses/268x160/full-stack-for-front-end-engineers-v3.webp" class="rounded">
+			</div>
+		</div>
+		<div class="col" style="padding-right:10px; font-size:13px">
+			<div class="row">
+				Продолжительность
+			</div>
+			<div class="row">
+				10:49:05
+			</div>
+		</div>
+		<div class="col" style="font-size:13px">
+			<div class="row">
+				Источник
+			</div>
+			<div class="row">
+				<a class="link-light" href="/frontendmasters">frontendmasters</a>
+			</div>
+		</div>
+		<div class="col" style="font-size:13px">
+			<div class="row">
+				Категория
+			</div>
+			<div class="row">
+				<a class="link-light" href="/frontend">Frontend</a>
+			</div>
+		</div>
+		<div class="col" style="font-size:13px">
+			<div class="row">
+				Количество уроков
+			</div>
+			<div class="row">
+				12 видео
+			</div>
+		</div>
+		<div class="col" style="font-size:13px">
+			<div class="row">
+				Дата добавления 
+			</div>
+			<div class="row">
+				11/03/2023
+			</div>
+		</div>
+		<div class="col">
+			<div class="row">
+				Язык
+			</div>
+			<div class="row">
+				English
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="row rounded" style="background-color:#472f66; margin:5px">
+				<div class="col">
+					<img src="https://cdn-icons-png.flaticon.com/512/829/829117.png" style="width:30px; height:30px">
+				</div>
+				<div class="col">
+					Следить
+				</div>
+			</div>
+			<div class="row rounded" style="background-color:#472f66; margin:5px">
+				<div class="col">
+					<img src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"style="width:30px; height:30px">
+				</div>
+				<div class="col">
+					Загрузить
+				</div>
+			</div>
+			<div class="row" style="padding:10px">
+				<div class="col">
+					<img src="https://cdn-icons-png.flaticon.com/512/880/880452.png" style="height:30px; width:30px">
+				</div>
+				<div class="col">
+					16
+				</div>
+				<div class="col">
+					<img src="https://cdn-icons-png.flaticon.com/512/880/880460.png" style="height:30px; width:30px">
+				</div>
+				<div class="col">
+					0
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div class="row">
+				Если вы когда-нибудь задумывались о том, что значит поднять сервер или что означают все эти непонятные термины, такие как «балансировщик нагрузки» или «обратный прокси», этот курс для вас. От понимания различных типов баз данных до защиты вашего веб-сервера - Джем Янг научит вас навыкам, необходимым для работы в стеке. Этот курс преподается с точки зрения инженера по интерфейсу и дает инструменты и знания для создания работающего веб-приложения от начала до конца.
+			</div>
+			<div class="row list">
+				<ul>
+					<li>Освойтесь с интерфейсом командной строки</li>
+					<li>Понимание основных частей работы сервера</li>
+					<li>Узнайте, как избежать распространенных ошибок при защите сервера</li>
+					<li>Узнайте, как выбрать правильную базу данных</li>
+					<li>Узнайте, как и почему используют Docker</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="container-md" style="margin-top: 50px; box-shadow: 0px 0px 5px 1px white; color: white">
+	<div class="row">
+		<div class="col">
+			<iframe src="https://youtu.be/5-MLMzbUlPY" frameborder="0" allowtransparency="true" width="1000" height="567"></iframe>
+		</div>
+		<div class="col">
+			<ul class="list-group">
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 1.
+						</div>
+						<div class="row">
+							Day 1 - part 1
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 2.
+						</div>
+						<div class="row">
+							Day 2 - part 2
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 3.
+						</div>
+						<div class="row">
+							Day 3 - part 3
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 4.
+						</div>
+						<div class="row">
+							Day 4 - part 4
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 5.
+						</div>
+						<div class="row">
+							Day 5 - part 5
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 6.
+						</div>
+						<div class="row">
+							Day 6 - part 6
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 7.
+						</div>
+						<div class="row">
+							Day 7 - part 7
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 8.
+						</div>
+						<div class="row">
+							Day 8 - part 8
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 9.
+						</div>
+						<div class="row">
+							Day 9 - part 9
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 10.
+						</div>
+						<div class="row">
+							Day 10 - part 10
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 11.
+						</div>
+						<div class="row">
+							Day 11 - part 11
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item" style="background-color:#190b2b; color:white">
+					<div class="col">
+						<div class="row">
+							Урок 12.
+						</div>
+						<div class="row">
+							Day 12 - part 12
+						</div>
+					</div>
+					<div class="col">
+						<div class="row" style="font-size:13px">
+							0:50:30
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
